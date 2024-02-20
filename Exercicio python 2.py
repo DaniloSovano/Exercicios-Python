@@ -1,0 +1,5 @@
+alt = int(input('insira a altura do retangulo em metros:'))
+larg = int(input('insira a largura do retangulo em metros:'))
+Area = (alt * larg)
+per = (alt * 2)+(larg * 2)
+print( f'A área do retangulo é: {Area}m² e o perímetro:{per} metros') 

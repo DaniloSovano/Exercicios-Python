@@ -75,11 +75,6 @@ while True:
     elif resposta in ('7'):
         print('Até a próxima')
         break
-        
     
-
-
-
-
-   
-         
+    
+    

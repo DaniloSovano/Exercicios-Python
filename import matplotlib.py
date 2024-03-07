@@ -1,18 +1,25 @@
 import matplotlib.pyplot as plt
-dias = [1,2,3,4,5,]
-cresc = [1,4,8,16,32]
-plt.bar(dias,cresc, color = '#6600cc')
-plt.title('Intel UHD Graphics')
-plt.xlabel('dias')
-plt.ylabel('crescimeto')
-plt.grid(True)
+while True:
+   
+   
+   
+    def fatorial(a):
+        fat = 1
+        for i in range(1, a+1):
+            fat *= i
+        return fat 
 
 
-labels = 'Nina', 'Guilherme','Tavares', 'Raiane'
-sizes = [0.5, 30, 50,15] 
+    def plot_fatorial(n):
+        x = list(range(n + 1))
+        y = [fatorial(i) for i in x]
+        plt.plot(x , y , marker= 'o', linestyle= '-')
+        plt.title('Grafico Fatorial')
+        plt.xlabel('Numero')
+        plt.ylabel('Fatorial')
+        plt.grid(True)
+        plt.show()
 
-fig,ax = plt.subplots()
-ax.pie(sizes, labels=labels)
-plt.title('veteranos dahora')
-plt.figure(facecolor = 'purple')
-plt.show()
+    result = int(input('Insira o numero para o fatorial: '))
+
+    print(plot_fatorial(result))

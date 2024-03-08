@@ -81,7 +81,6 @@ def plot_linear(x):
     plt.xlabel('x')
     plt.ylabel('y')
     plt.grid(True)
-        
     plt.show()
 
 
@@ -91,18 +90,45 @@ def exponencial(a, x):
 
 
 def plot_exponencial(x, y):
-    plt.plot(exponencial(x))
+    x = np.linspace(-10, 10, 100)
+    y = exponencial(num1, x)
+    plt.plot(x, y)
+    plt.title(f'Gráfico da função exponencial: {num1}^{num2}')
+    plt.xlabel('x')
+    plt.ylabel('y')
+    plt.grid(True)
+    plt.show()
 
 def funcao_quadratica(x, a, b, c):
-    print("Faça o código")
-
+    quad = a * x ** 2 + b * x + c
+    return quad 
 
 def calcular_raizes(a, b, c):
-    print("Faça o código")
+      delta = b**2 - 4*a*c
+      
+      if delta > 0:
+        raiz1 = (-b + delta ** 0.5) / (2*a)
+        raiz2 = (-b - delta ** 0.5) / (2*a)
+        return raiz1, raiz2
+      
+      elif delta == 0:
+        raiz = -b / (2*a)
+        return raiz
+      
+      else:
+        return 'Não há raizes existentes'
 
 
 def plot_quadratica(a, b, c):
-    print("Faça o código")
+    x  = np.linspace(-10, 10, 50)
+    y = funcao_quadratica(x, a, b, c)
+    plt.plot(x, y, label=f'{a}x² + {b}x + {c}')
+    plt.title('Gráfico de uma Função Quadrática')
+    plt.xlabel('x')
+    plt.ylabel('f(x)')
+    plt.grid(True)
+    plt.show()
+
 
 
 def fatorial(a):
@@ -121,8 +147,8 @@ def plot_fatorial(n):
     plt.grid(True)
     plt.show()
  
-result = int(input('Insira o numero para o fatorial: '))
-print(plot_fatorial(result))
+    result = int(input('Insira o numero para o fatorial: '))
+    print(plot_fatorial(result))
 
 def print_calculator():
 
@@ -167,7 +193,9 @@ def init():
 
                 if categoria == 1:
                     print("\nVocê escolheu SOMA")
-                    print("Faça o código")
+                    num1 = int(input('Digite o primeiro numero: '))
+                    num2 = int(input('Digite o segundo numero: '))
+                    print(f'O Resultado da soma de {num1}+{num2} é {soma(num1,num2)}')
                     break
 
                 elif categoria == 2:

@@ -82,7 +82,15 @@ elif ano <= 2008:
 
 else:
     print('Você não está apto a votar e nem a dirigir!')  
-6)
 
+6) Faça um algoritmo que dados três valores A, B e C, verifica se eles
+podem ser os comprimentos dos lados de um triângulo. Se forem,
+verifique se compõem um triângulo equilátero, triângulo isósceles ou
+escaleno. Informe se não compuserem nenhum triângulo.
 
+a = int(input('Digite o valor do lado a: '))
+b = int(input('Digite o valor do lado b: '))
+c = int(input('Digite o valor do lado c: '))
 
+if a + b > c and a + c > b and b + c > a:
+    

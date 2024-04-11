@@ -1,0 +1,13 @@
+Elabore um algoritmo que dado um valor inteiro, fornecido via teclado,
+informar se o número é par ou ímpar.
+
+num1 = int(input('Digite o numero que deseja verificar se é impar ou par: '))
+
+if num1 % 2 == 0:    
+    print('O número é par!')    
+else:
+    print('O número é impar!')  
+
+Desenvolva um algoritmo que calcule as raízes de uma equação do 2º
+grau, na forma Ax2 + Bx + C, levando em consideração a existência de
+raízes reais

@@ -1,4 +1,4 @@
-Elabore um algoritmo que dado um valor inteiro, fornecido via teclado,
+1) Elabore um algoritmo que dado um valor inteiro, fornecido via teclado,
 informar se o número é par ou ímpar.
 
 num1 = int(input('Digite o numero que deseja verificar se é impar ou par: '))
@@ -8,6 +8,81 @@ if num1 % 2 == 0:
 else:
     print('O número é impar!')  
 
-Desenvolva um algoritmo que calcule as raízes de uma equação do 2º
+2) Desenvolva um algoritmo que calcule as raízes de uma equação do 2º
 grau, na forma Ax2 + Bx + C, levando em consideração a existência de
 raízes reais
+
+a = int(input('Digite o valor de a: '))
+b = int(input('Digite o valor de b: '))
+c = int(input('Digite o valor de c: '))
+
+delta = b**2 - 4*a*c
+      
+if delta > 0:
+    raiz1 = (-b + delta ** 0.5) / (2*a)
+    raiz2 = (-b - delta ** 0.5) / (2*a)
+    print(f'As raizes da sua função quadratica são: {raiz1} {raiz2}')
+      
+elif delta == 0:
+    raiz = -b / (2*a)
+    print(f'A raiz da sua equação é : {raiz}')
+
+else:
+    print('Não há raizes existentes')
+
+3) Construa um algoritmo que leia um número inteiro do teclado e diga se ele
+é divisível por 5, por 2 ou por nenhum deles.
+
+num = int(input('Digite o numero que deseja verificar se é divisível por 2 ou por 5: '))
+
+if num % 10 == 0:
+    print('O numero é divisível por 2 e por 5!')    
+    
+elif num % 5 == 0:
+    print('O numero é divisível por 5!')
+
+elif num % 2 == 0:
+    print('O numero é divisível por 2!')
+
+else:
+    print('O numero não é divisível por 2 ou por 5!')
+
+4) Construa um algoritmo que calcule o salário líquido de um funcionário. O
+algoritmo recebe através do teclado o salário bruto de um determinado
+funcionário, caso este seja inferior a R$3.000,00 é descontado 5% em
+impostos, se o salário variar de R$3.000,00 até R$12.000,00 é descontado
+10% em impostos, se esse for superior a R$12.000,00 é descontado 15%
+em impostos. Ao final o algoritmo deve exibir o salário líquido do
+funcionário.
+
+bruto = int(input('Digite o valor do salario bruto em reais: '))
+    
+if bruto < 3000:
+    salario = bruto - (bruto * 5/100)
+    print(f'O salario líquido é: R${salario:.2f}')
+
+elif bruto >= 3000 and bruto < 12000:
+    salario = bruto - (bruto *10/100)
+    print(f'o salario líquido é: R${salario:.2f}')
+else:
+    salario = bruto -(bruto *15/100)
+    print(f'O salario líquido é: R${salario:.2f} ')
+
+5) Elabore um algoritmo que, a partir do ano de nascimento do usuário,
+determine se o mesmo está apto a votar (idade >=16) e se está apto a
+dirigir (idade >=18).
+
+ano = int(input('Digite o seu ano de nascimento: '))
+
+if ano <= 2006:
+    print('Vocẽ está apto a dirigir e votar!')
+
+elif ano <= 2008:
+    print('Você está apto a votar!')   
+
+else:
+    print('Você não está apto a votar e nem a dirigir!')  
+6)
+
+
+

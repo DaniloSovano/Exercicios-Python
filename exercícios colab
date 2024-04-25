@@ -1,0 +1,134 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/DaniloSovano/Exercicios-Python/blob/main/exerc%C3%ADcios%20colab\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def calculo():\n",
+        "  try:\n",
+        "    a = int(input(\"Digite o primeiro numero: \"))\n",
+        "    b = int(input(\"Digite o segundo numero: \"))\n",
+        "    c = int(input(\"Digite o terceiro numero: \"))\n",
+        "\n",
+        "    soma = a + b + c\n",
+        "    print(\"A soma de {} + {} + {} é: {}\".format(a,b,c,soma))\n",
+        "  except ValueError:\n",
+        "    print(\"Você não digitou valores validos\")\n",
+        "\n",
+        "\n",
+        "calculo()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nfLmxMn4R_j1",
+        "outputId": "8e730c47-ce13-4d2f-feb1-01add277d9a1"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o primeiro numero: dez\n",
+            "Você não digitou valores validos\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def remover_fruta(lista, fruta):\n",
+        "    if fruta in lista:\n",
+        "        lista.remove(fruta)\n",
+        "    else:\n",
+        "        print(f\"{fruta} não está na lista.\")\n",
+        "\n",
+        "def adicionar_fruta(lista, fruta):\n",
+        "    lista.append(fruta)\n",
+        "\n",
+        "def alterar_fruta(lista, fruta_antiga, fruta_nova):\n",
+        "    if fruta_antiga in lista:\n",
+        "        index = lista.index(fruta_antiga)\n",
+        "        lista[index] = fruta_nova\n",
+        "    else:\n",
+        "        print(f\"{fruta_antiga} não está na lista.\")\n",
+        "\n",
+        "frutas = [\"melancia\", \"melão\", \"manga\", \"banana\", \"morango\"]\n",
+        "\n",
+        "# a) Remover \"banana\" da lista\n",
+        "remover_fruta(frutas, \"\")\n",
+        "\n",
+        "# b) Adicionar \"maracujá\" na lista\n",
+        "adicionar_fruta(frutas, \"maracujá\")\n",
+        "\n",
+        "# c) Alterar \"melão\" para \"maçã\"\n",
+        "alterar_fruta(frutas, \"melão\", \"maçã\")\n",
+        "\n",
+        "print(frutas)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "gDFuFk3KMydY",
+        "outputId": "6d7974b5-ba80-4eaf-d250-0a710e8cd87c"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " não está na lista.\n",
+            "['melancia', 'maçã', 'manga', 'banana', 'morango', 'maracujá']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "xc8HvQqKSn0u"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "\n"
+      ],
+      "metadata": {
+        "id": "47uQRjVpSqQj"
+      }
+    }
+  ]
+}
